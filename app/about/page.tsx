@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About",
-  description: "About Relay Lab, the test site for Relay's GitHub publishing checks.",
+  title: "About the lab",
+  description: "Relay Lab is a small static Next.js site. Relay uses it to test pull requests, deployment signals and reverts.",
 };
 
 export default function Page() {

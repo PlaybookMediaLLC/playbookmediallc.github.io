@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Client-rendered test page | Relay Lab</title>
+    <meta name="description" content="A test page that builds its content in the browser, for Relay's rendered SEO checks." />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // Relay Lab test fixture (RFC-0010 phase 3): the server sends an empty
+      // shell, and the browser builds the page. Crawlers that do not run
+      // JavaScript see no text.
+      const words = "Relay checks rendered pages when the raw HTML is an empty application shell. ";
+      const root = document.getElementById("root");
+      root.innerHTML =
+        "<h1>Client-rendered test page</h1>" +
+        "<p>" + words.repeat(12) + "</p>" +
+        '<p><a href="/">Home</a> · <a href="/about/">About</a> · <a href="/pricing/">Pricing</a></p>';
+    </script>
+  </body>
+</html>
